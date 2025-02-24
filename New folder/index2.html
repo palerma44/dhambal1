@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DHAMBAAL ONLINE</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const dropdownButton = document.querySelector(".dropdown-button");
+            const dropdownMenu = document.querySelector(".dropdown-menu");
+
+            dropdownButton.addEventListener("click", function () {
+                dropdownMenu.classList.toggle("hidden");
+            });
+
+            document.addEventListener("click", function (event) {
+                if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                    dropdownMenu.classList.add("hidden");
+                }
+            });
+        });
+    </script>
+</head>
+
+<body class="bg-gray-50">
+    <header class="bg-white shadow py-4">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <div class="flex items-center space-x-2">
+                <img src="images/lug.png" alt="Logo" class="w-20">
+                <span class="text-green-600 font-bold text-xl"></span>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <ul class="flex space-x-6">
+                    <li class="relative">
+                        <button class="dropdown-button focus:outline-none">All courses &#9662;</button>
+                        <ul class="dropdown-menu absolute left-0 mt-2 w-48 bg-white shadow-lg hidden">
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Graphic Design</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Video Editing</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">networking</a></li>
+                            <li class="relative group">
+                                <a href="#" class="block px-4 py-2 hover:bg-gray-200">Web Development &#9656;</a>
+                                <ul
+                                    class="absolute left-full top-0 mt-0 w-48 bg-white shadow-lg hidden group-hover:block">
+                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Frontend</a></li>
+                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Backend</a></li>
+                                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Full Stack</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li><a href="#" class="hover:text-gray-600">Grades</a></li>
+                    <li><a href="#" class="hover:text-gray-600">Worksheets</a></li>
+                    <li><a href="#" class="hover:text-gray-600">Lesson Plans</a></li>
+                    <li><a href="#" class="hover:text-gray-600">More Resources</a></li>
+                </ul>
+            </nav>
+            <div class="space-x-4">
+                <button class="border border-green-600 text-green-600 px-4 py-2 rounded-lg">Login</button>
+                <button class="bg-green-600 text-white px-4 py-2 rounded-lg">Register</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="container mx-auto flex flex-col md:flex-row items-center px-6 py-12">
+
+        <div class="md:w-1/2 text-center md:text-left">
+            <h1 class="text-4xl font-bold text-gray-900">Discover the Top <span class="text-green-600">Courses</span> to
+                Enhance Your Skills</h1>
+            <p class="text-gray-600 mt-4">Universal is dedicated to offering educational experiences designed to align
+                with new and evolving career paths.</p>
+            <div class="mt-6 flex items-center border border-gray-300 rounded-lg p-2 w-full md:w-3/4">
+                <input type="text" placeholder="Search Program" class="w-full outline-none px-2">
+                <button class="bg-green-600 text-white p-2 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0 0 50 50">
+                        <path
+                            d="M 21 3 C 11.621094 3 4 10.621094 4 20 C 4 29.378906 11.621094 37 21 37 C 24.710938 37 28.140625 35.804688 30.9375 33.78125 L 44.09375 46.90625 L 46.90625 44.09375 L 33.90625 31.0625 C 36.460938 28.085938 38 24.222656 38 20 C 38 10.621094 30.378906 3 21 3 Z M 21 5 C 29.296875 5 36 11.703125 36 20 C 36 28.296875 29.296875 35 21 35 C 12.703125 35 6 28.296875 6 20 C 6 11.703125 12.703125 5 21 5 Z">
+                        </path>
+                    </svg>
+                </button>
+
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                <div class="bg-green-100 p-4 rounded-lg text-center">
+                    <h3 class="text-lg font-semibold text-gray-900">4000+</h3>
+                    <p class="text-gray-600 text-sm">Online courses</p>
+                </div>
+                <div class="bg-yellow-100 p-4 rounded-lg text-center">
+                    <h3 class="text-lg font-semibold text-gray-900">150+</h3>
+                    <p class="text-gray-600 text-sm">Expert instructors</p>
+                </div>
+                <div class="bg-blue-100 p-4 rounded-lg text-center">
+                    <h3 class="text-lg font-semibold text-gray-900">2500+</h3>
+                    <p class="text-gray-600 text-sm">Enrolled Students</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:w-1/2 flex justify-center">
+            <img src="images/vv-removebg-preview.png" alt="Illustration" class="w-80 md:w-96">
+        </div>
+    </section>
+
+    <section class="bg-green-600 text-white py-10">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <!-- Feature 1 -->
+            <div class="flex items-center space-x-4">
+                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                    <img src="images/icons8-courses-64.png" alt="Courses" class="w-8 h-8">
+                </div>
+                <p class="text-lg font-semibold">Explore 100,000 <br> online courses</p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="flex items-center space-x-4">
+                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                    <img src="images/icons8-teacher-50.png" alt="Instructor" class="w-8 h-8">
+                </div>
+                <p class="text-lg font-semibold">Find the right <br> instructor for you</p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="flex items-center space-x-4">
+                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center">
+                    <img src="images/icons8-computer-50 (1).png" alt="Lifetime Access" class="w-8 h-8">
+                </div>
+                <p class="text-lg font-semibold">Lifetime access <br> Learn on your schedule</p>
+            </div>
+        </div>
+    </section>
+    <!-- Top Categories Section -->
+    <section class="py-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-green-600 text-sm font-semibold">EXPLORE CATEGORIES</h2>
+            <h1 class="text-3xl font-bold">Top Categories</h1>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-6 mt-8">
+                <!-- Category 1 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto">
+                        <img src="images/program.png" alt="Photography" class="w-10 h-10">
+                    </div>
+                    <p class="font-semibold mt-2">programming</p>
+                    <p class="text-gray-500">Course: <strong>05</strong></p>
+                </div>
+
+                <!-- Category 2 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto">
+                        <img src="images/data sc.png" alt="Digital Marketing" class="w-10 h-10">
+                    </div>
+                    <p class="font-semibold mt-2">Data Science </p>
+                    <p class="text-gray-500">Course: <strong>05</strong></p>
+                </div>
+
+                <!-- Category 3 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto">
+                        <img src="images/Digital Marketing.png" alt="Health & Fitness" class="w-10 h-10">
+                    </div>
+                    <p class="font-semibold mt-2">digital-marketing</p>
+                    <p class="text-gray-500">Course: <strong>05</strong></p>
+                </div>
+
+                <!-- Category 4 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto">
+                        <img src="images/photo.png" alt="Robotics & AI" class="w-10 h-10">
+                    </div>
+                    <p class="font-semibold mt-2">photography</p>
+                    <p class="text-gray-500">Course: <strong>08</strong></p>
+                </div>
+
+                <!-- Category 5 -->
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto">
+                        <img src="images/network.png" alt="Cooking & Baking" class="w-10 h-10">
+                    </div>
+                    <p class="font-semibold mt-2">networking</p>
+                    <p class="text-gray-500">Course: <strong>09</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mx-auto px-6 py-12">
+        <p class="text-green-600 font-semibold uppercase">Top Picks for You</p>
+        <h2 class="text-3xl font-bold text-gray-900 mt-2">Discover Your Next Course</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 mt-6">
+            <!-- Course Card 1 -->
+            <div class="bg-white p-6 shadow-lg rounded-lg flex">
+                <img src="images/pro.jpg" alt="Coding Course" class="w-40 h-40 object-cover rounded-lg">
+                <div class="ml-4">
+                    <span class="bg-green-500 text-white px-2 py-1 text-xs font-bold rounded">10% Off</span>
+                    <h3 class="text-lg font-semibold text-gray-900 mt-2">Introduction to Coding and Programming</h3>
+                    <p class="text-gray-600 text-sm mt-1">This course introduces students to the basics of coding and
+                        computer programming.</p>
+                    <div class="flex items-center mt-2">
+                        <span class="text-yellow-500 text-lg">★★★★★</span>
+                        <span class="text-sm text-gray-600 ml-2">4.8 (313 Ratings)</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mt-1">💡 25 Lessons | 👨‍🎓 200 Students</p>
+                    <p class="text-green-600 font-semibold text-lg mt-1">$1005.00 <span
+                            class="text-gray-400 line-through">$1525.00</span></p>
+                </div>
+            </div>
+
+
+            <!-- Course Card 2 -->
+            <div class="bg-white p-6 shadow-lg rounded-lg flex">
+                <img src="images/design.jpg" alt="Media Literacy Course" class="w-40 h-40 object-cover rounded-lg">
+                <div class="ml-4">
+                    <span class="bg-red-500 text-white px-2 py-1 text-xs font-bold rounded">Top</span>
+                    <h3 class="text-lg font-semibold text-gray-900 mt-2">graphic design</h3>
+                    <p class="text-gray-600 text-sm mt-1">Students will learn to evaluate the credibility of sources,
+                        recognize bias, and understand the impact.</p>
+                    <div class="flex items-center mt-2">
+                        <span class="text-yellow-500 text-lg">★★★★★</span>
+                        <span class="text-sm text-gray-600 ml-2">4.8 (300 Ratings)</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mt-1">💡 15 Lessons | 👨‍🎓 350 Students</p>
+                    <p class="text-green-600 font-semibold text-lg mt-1">$1225.00 <span
+                            class="text-gray-400 line-through">$1625.00</span></p>
+                </div>
+            </div>
+
+            <!-- Course Card 3 -->
+            <div class="bg-white p-6 shadow-lg rounded-lg flex">
+                <img src="images/vedio.jpg" alt="Creative Writing" class="w-40 h-40 object-cover rounded-lg">
+                <div class="ml-4">
+                    <span class="bg-blue-500 text-white px-2 py-1 text-xs font-bold rounded">Featured</span>
+                    <h3 class="text-lg font-semibold text-gray-900 mt-2">vedio editing</h3>
+                    <p class="text-gray-600 text-sm mt-1">In this course, students develop their writing skills by
+                        exploring different forms of creative writing.</p>
+                    <div class="flex items-center mt-2">
+                        <span class="text-yellow-500 text-lg">★★★★★</span>
+                        <span class="text-sm text-gray-600 ml-2">4.8 (200 Ratings)</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mt-1">💡 20 Lessons | 👨‍🎓 250 Students</p>
+                    <p class="text-green-600 font-semibold text-lg mt-1">$2025.00 <span
+                            class="text-gray-400 line-through">$2500.00</span></p>
+                </div>
+            </div>
+
+            <!-- Course Card 4 -->
+            <div class="bg-white p-6 shadow-lg rounded-lg flex">
+                <img src="images/net.jpg" alt="Health and Wellness" class="w-40 h-40 object-cover rounded-lg">
+                <div class="ml-4">
+                    <span class="bg-green-500 text-white px-2 py-1 text-xs font-bold rounded">20% Off</span>
+                    <h3 class="text-lg font-semibold text-gray-900 mt-2">networking</h3>
+                    <p class="text-gray-600 text-sm mt-1">This course focuses on maintaining physical and mental
+                        well-being in a digital world.</p>
+                    <div class="flex items-center mt-2">
+                        <span class="text-yellow-500 text-lg">★★★★★</span>
+                        <span class="text-sm text-gray-600 ml-2">4.8 (303 Ratings)</span>
+                    </div>
+                    <p class="text-gray-600 text-sm mt-1">💡 35 Lessons | 👨‍🎓 300 Students</p>
+                    <p class="text-green-600 font-semibold text-lg mt-1">$1700.00 <span
+                            class="text-gray-400 line-through">$2005.00</span></p>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const webDevItem = document.querySelector(".dropdown-menu li:nth-child(3)");
+                const subMenu = webDevItem.querySelector("ul");
+
+                webDevItem.addEventListener("mouseenter", function () {
+                    subMenu.classList.remove("hidden");
+                });
+
+                webDevItem.addEventListener("mouseleave", function () {
+                    subMenu.classList.add("hidden");
+                });
+            });
+        </script>
+</body>
+
+</html>

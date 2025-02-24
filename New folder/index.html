@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar with Dropdown</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <header class="bg-white shadow py-4">
+        <nav class="bg-white shadow-md p-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <img src="images/logo.jpg" alt="Logo" class="h-20 w-20">
+                    <div class="text-blue-600 text-xl font-bold">ONLINE EDUCATION</div>
+                </div>
+                <ul class="flex space-x-6">
+                    <li class="relative">
+                        <button class="dropdown-button focus:outline-none"> All courses
+
+                            &#9662;</button>
+                        <ul class="absolute left-0 mt-2 w-48 bg-white shadow-lg hidden">
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Graphic Design</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Video Editing</a></li>
+                            <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Web Development</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="hover:text-gray-600">Grades</a></li>
+                    <li><a href="#" class="hover:text-gray-600">Worksheets</a></li>
+
+                    <li><a href="#" class="hover:text-gray-600">Lesson Plans</a></li>
+                    <li><a href="#" class="hover:text-gray-600">More Resources</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="space-x-4">
+            <button class="border border-green-600 text-green-600 px-4 py-2 rounded-lg">Login</button>
+            <button class="bg-green-600 text-white px-4 py-2 rounded-lg">Register</button>
+        </div>
+    </header>
+
+    </div>
+    <section class="bg-gray-100 py-12">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <!-- Left Side: Image -->
+            <div class="md:w-1/2 mb-6 md:mb-0">
+                <img src="images/vv.jpg" alt="Learning Illustration" class="w-full max-w-md mx-auto">
+            </div>
+
+            <!-- Right Side: Content -->
+            <div class="md:w-1/2 text-left">
+                <h3 class="text-green-600 font-semibold uppercase">About Us</h3>
+                <h2 class="text-3xl font-bold mt-2 mb-4">
+                    We're Focused on Technology and <br> Innovative Learning
+                </h2>
+                <p class="text-gray-600 mb-6">
+                    Our mission is to empower students with the knowledge, skills, and mindset needed to succeed in
+                    the
+                    21st century. We believe that education is more than just academics—it's about nurturing
+                    well-rounded individuals who are confident.
+                </p>
+
+                <!-- Features -->
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="flex items-start">
+                        <span class="bg-green-500 text-white p-2 rounded-full mr-3">
+                            📚
+                        </span>
+                        <div>
+                            <h4 class="font-semibold">Smart Classrooms</h4>
+                            <p class="text-gray-600 text-sm">Interactive whiteboards, projectors, and digital
+                                content
+                                for an enhanced learning experience.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <span class="bg-green-500 text-white p-2 rounded-full mr-3">
+                            💻
+                        </span>
+                        <div>
+                            <h4 class="font-semibold">Online Learning Platforms</h4>
+                            <p class="text-gray-600 text-sm">Integrated with platforms like Google Classroom,
+                                Microsoft
+                                Teams, and other LMS.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <span class="bg-green-500 text-white p-2 rounded-full mr-3">
+                            🎭
+                        </span>
+                        <div>
+                            <h4 class="font-semibold">Extracurricular Programs</h4>
+                            <p class="text-gray-600 text-sm">Wide range of clubs and activities, including sports,
+                                arts,
+                                music, and debate teams.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start">
+                        <span class="bg-green-500 text-white p-2 rounded-full mr-3">
+                            🛡️
+                        </span>
+                        <div>
+                            <h4 class="font-semibold">Security and Safety</h4>
+                            <p class="text-gray-600 text-sm">24/7 surveillance, secure entry points, and emergency
+                                preparedness protocols.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <a href="#"
+                    class="mt-6 inline-block bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700 transition">Know
+                    More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Our Courses</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="images/design.jpg" alt="Design Course" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold">Design</h3>
+                        <p class="text-gray-600 mt-2">Learn the fundamentals of design and creativity.</p>
+                        <a href="#" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded">Learn
+                            More</a>
+                    </div>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="images/vedio.jpg" alt="Video Editing Course" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold">Video Editing</h3>
+                        <p class="text-gray-600 mt-2">Master the skills of video editing and production.</p>
+                        <a href="#" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded">Learn
+                            More</a>
+                    </div>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="images/web dev.jpg" alt="Web Development Course" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold">Web Development</h3>
+                        <p class="text-gray-600 mt-2">Become a web developer with modern technologies.</p>
+                        <a href="#" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll(".dropdown-button").forEach(button => {
+                button.addEventListener("click", function () {
+                    let dropdown = this.nextElementSibling;
+                    dropdown.classList.toggle("hidden");
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
